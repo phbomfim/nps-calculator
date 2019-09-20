@@ -1,24 +1,9 @@
-# README
+## Test Validations in Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Tutorial : [How to Test Validations in Rails](https://gorails.com/episodes/testing-rails-validations/).
 
-Things you may want to cover:
+- Created by [Go Rails](https://gorails.com).
 
-* Ruby version
+<br>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Go Rails](https://d2i2nj5el4wq1j.cloudfront.net/assets/logo-603a6fca4061e4f05b3c6aa366499601ed24e78bc2becd559fed2ddbb1b7fb33.svg)

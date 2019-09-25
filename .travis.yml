@@ -9,4 +9,5 @@ services:
 addons:
  postgresql: "10"
 before_script:
-- rails db:create db:migrate
+- bundle exec rake db:create
+- bundle exec rake db:migrate

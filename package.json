@@ -12,7 +12,8 @@
     "jquery": "^3.4.1",
     "local-time": "^2.1.0",
     "popper.js": "^1.15.0",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpacker": "^4.5.0"
   },
   "version": "0.1.0",
   "devDependencies": {

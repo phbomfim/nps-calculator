@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.6.3
+sudo: required
+cache:
+- bundler
+services:
+- postgresql
+addons:
+ postgresql: "10"
+before_script:
+- bundle exec rake db:create db:migrate
+- yarn install --check-files

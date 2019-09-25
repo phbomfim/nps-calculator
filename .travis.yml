@@ -3,8 +3,8 @@ rvm:
 - 2.6.3
 sudo: required
 services:
-	- postgresql
+- postgresql
 addons:
-	postgresql: "10"
-before_script:
-	- bash bin/install-postgres-10.sh
+ postgresql: "10"
+# before_script:
+# 	- bash bin/install-postgres-10.sh

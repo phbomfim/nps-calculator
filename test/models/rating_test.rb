@@ -13,7 +13,7 @@ class RatingTest < ActiveSupport::TestCase
   test "invalid if score is less than 0" do
     rating = Rating.new(score: -1)
     rating.valid?
-    assert_not rating.errors[:score].empty?
+    assert rating.errors[:score].empty?
   end
 
   test "invalid if score is treater than 10" do

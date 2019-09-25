@@ -1,9 +1,6 @@
 language: ruby
-cache:
-	- bundler
-
-before_script:
-	- bundle exec rails db:migrate
-
-test:
-	- bundle exec rails t
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2

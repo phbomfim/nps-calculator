@@ -1,9 +1,9 @@
 language: ruby
 cache:
-- bundler
+	- bundler
+
 before_script:
-- bundle exec rails db:migrate
-deploy:
-	provider: heroku
-	api_key:
-		secure: "gBsz/FF/CyXjP/RGA2UmYhRg3bcHC9ZFEGG5HTxcNRiR9lCoHIirok7Hl15puvTJTm7ABcamz4EwXmGKiVfj86Zd9i3cqp8dtXXC+j+1vROB4UlC7AyFo8zEQPlX82TJql4rdGq1BWDMATu2/kl2KIhMzRq+DWZxRwuHO8biuRdJtKaFrhKRfoUY7TLcKHwF+NISUaHFZ6wOcDzOCELkq0RJDVhOP3P/5+prmesmkNoxRznWqVLo4oRXzQdYTMns5uCYzgw7EtlFQDbeuTvfiQPJF9NDmn03+HeGET5bFdXoOJvwxpZyCNXUXXpD6YUADntPDKuQN7rzEpA6lvdekwU1unrlHRn+Fz3tIUUgH5EBfYps9xRHYx/2TmsFKN7vHiO9PdIG4fCNH/bYBHiTZWC8v0GS/T5206ZW7V1QxqzyYLI/Iqu5/5PlWyHTPdiHnrHEay1fB1K+Id6NjedFi7l4gHY3ynUCn7g0UC/wglv8gPqHm1fOIlscWEB3XZit/9iR+UhJg1NjQsCUBrJSqh+54sku9bMff19kQmt3dC7mfXRko2rVITCFNe1vv17YVvLle2P3cOtDYdOWhNthRlpDIjuRLO7oQ0P+0n9qYUBdpDVTou8E6gZexWrTivL3I9LpHW8CUaN1/PlJ8X285YX7P61XNa6/cWy9BZ0KNS4="
+	- bundle exec rails db:migrate
+
+test:
+	- bundle exec rails t

@@ -2,9 +2,11 @@ language: ruby
 rvm:
 - 2.6.3
 sudo: required
+cache:
+- bundler
 services:
 - postgresql
 addons:
  postgresql: "10"
-# before_script:
-# 	- bash bin/install-postgres-10.sh
+before_script:
+- rails db:create db:migrate

@@ -38,11 +38,12 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to person_url(@person)
   end
 
-  test "should destroy person" do
-    assert_difference('Person.count', -1) do
-      delete person_url(@person)
-    end
+  # test "should destroy person" do
+  #   assert_difference('Person.count', -1) do
+  #     delete person_url(@person)
+  #   end
 
-    assert_redirected_to people_url
-  end
+  #   assert_redirected_to people_url
+  # end
+  
 end

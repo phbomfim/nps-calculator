@@ -10,4 +10,7 @@ addons:
  postgresql: "10"
 before_script:
 - bundle exec rake db:create db:migrate
-- yarn install --check-files 
+- yarn install --check-files
+- gem install rubocop
+- bundle install  
+- rubocop

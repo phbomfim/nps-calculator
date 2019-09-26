@@ -11,4 +11,5 @@ addons:
 before_script:
 - bundle exec rake db:create db:migrate
 - yarn install --check-files
+- bundle install
 - rubocop 

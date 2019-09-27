@@ -7,7 +7,15 @@ cache:
 services:
 - postgresql
 addons:
- postgresql: "10"
+  postgresql: '10'
 before_script:
-- bundle exec rake db:create db:migrate
+- bundle install
 - yarn install --check-files
+- bundle exec rake db:create db:migrate
+- bundle exec rubocop
+- bundle exec rake test
+deploy:
+  provider: heroku
+  api_key:
+    secure: mcJ2N1L5Is5/BNd5lNVPVV9I0SI7UhN9Oet2SlYq3LNg1/8kptNQuTM/3CaQkiJzgdLdicjCj2423v2+//Z2hHpdsNS27QsFlbOr9n98ZA0BPQX5fBEM+vh8Xfjt7oBr2pwcJUPV3bbCTWPrPGAVlHk4cVB64ebM1WK0l9TzfnhaWoZgpe0rIgaa2zk+Oqgel4S49y0HGQYs9rCVqYK/uLO5bLGf87ElKE9KlVOap3OR1TMOBul6uAkY5LAOfC9ahLiNy7Y6hqccDvU/6c3NnzC7pwM739jAt5G0D5eGIcJSKA1pixWOVcbqaqCXZ5F3ZOokIqszzt3v0wo32sUtvs/H5+BpzhHQ9I24H6fs4rtbWxZDfuh1lsdIUyUVlZrFutekwHp3NEuMNmhSUUQ2HD+kcS8/oy7PrYoYmQEFybEKtayQGbXTfyJ5u70GpOeFpkUUPy0QnEoaz9GHN1qw9yuwswrWqJR8O2/LhMhlJgQdiL7mau4Jv9jnY/IQYEy5mHRQn0+cYeya2SceyAtzXyZT4CEr74gpu0vHhqyB5k+BnjvjOlhKJM1m1Wrg2dXlJcHebYcMkXfcPNHaS/nw7wnmwgBoQtexTYF3UEAj+e6ycKz2v+aivL4G5aN9rxuPfMtDh9DiNz42NGafnoz3+l20hl0y1UeL+LT3PoAbskk=
+  app: paulobommfim-nps-calculator

@@ -1,0 +1,36 @@
+require:
+- rubocop
+
+AllCops:
+ TargetRubyVersion: 2.6.3
+ Exclude:
+   - 'bin/**/*'
+   - 'vendor/**/*'
+   - 'db/**/*'
+   - 'config/**/*'
+   - 'script/**/*'
+   - 'spec/rails_helper.rb'
+   - 'node_modules/**/*'
+   - 'vendor/**/*'
+   - '.git/**/*'
+   - 'test/**/*'
+   - 'app/channels/**/*'
+   - 'app/controllers/users/*'
+   
+Documentation:
+ Enabled: false
+
+Style/FrozenStringLiteralComment:
+ Enabled: false
+
+# Metrics/BlockLength:
+#  ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let']
+
+Metrics/LineLength:
+ Max: 120
+
+Metrics/MethodLength:
+ Enabled: false
+ 
+# AsciiComments:
+#   Enabled: false

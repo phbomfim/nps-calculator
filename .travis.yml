@@ -9,11 +9,12 @@ services:
 addons:
   postgresql: '10'
 before_script:
-- bundle exec rake db:create db:migrate
-- yarn install --check-files
-# - gem install rubocop
 - bundle install
-- bundle exec rubocop -a
+- yarn install --check-files
+- bundle exec rake db:create db:migrate
+- bundle exec rubocop
+- bundle exec rake test
+
 # deploy:
 #   provider: heroku
 #   api_key:

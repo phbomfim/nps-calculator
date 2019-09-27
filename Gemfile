@@ -28,8 +28,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'sqlite3', '1.4.1'
   gem 'rubocop'
+  gem 'sqlite3', '1.4.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
